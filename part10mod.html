@@ -105,28 +105,11 @@ function create ()
 {
     //  We need 2 extra pointers, as we only get 1 by default
     this.input.addPointer(2);
+    
+    player.setInteractive({ draggable: true });
 
-    var sprite1 = this.add.sprite(400, 100, 'logo').setInteractive({ draggable: true });
 
-    sprite1.on('drag', function (pointer, dragX, dragY) {
-
-        this.x = dragX;
-        this.y = dragY;
-
-    });
-
-    var sprite2 = this.add.sprite(400, 300, 'logo').setInteractive({ draggable: true });
-
-    sprite2.on('drag', function (pointer, dragX, dragY) {
-
-        this.x = dragX;
-        this.y = dragY;
-
-    });
-
-    var sprite3 = this.add.sprite(400, 500, 'logo').setInteractive({ draggable: true });
-
-    sprite3.on('drag', function (pointer, dragX, dragY) {
+    player.on('drag', function (pointer, dragX, dragY) {
 
         this.x = dragX;
         this.y = dragY;
