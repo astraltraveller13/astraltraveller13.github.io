@@ -103,18 +103,6 @@ function create ()
     
     function create ()
 {
-    //  We need 2 extra pointers, as we only get 1 by default
-    this.input.addPointer(2);
-    
-    player.setInteractive({ draggable: true });
-
-
-    player.on('drag', function (pointer, dragX, dragY) {
-
-        this.x = dragX;
-        this.y = dragY;
-
-    });
 
     //  Some stars to collect, 12 in total, evenly spaced 70 pixels apart along the x axis
     stars = this.physics.add.group({
